@@ -1,0 +1,36 @@
+version: 2
+# Python CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-python/ for more details
+#
+executor: default
+jobs:
+  build:
+    working_directory: ~/repo
+    docker:
+    # Use the same Docker base as the project
+      - image: chasetheblack/udacity-capstone-project
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: |
+            apt update
+            apt install python3 --assume-yes
+            apt-get install build-essential --assume-yes
+            apt-get install python3-venv --assume-yes
+            apt-get install wget  --assume-yes
+            python3 -m venv venv            
+            source venv/bin/activate
+            make install
+            # Install hadolint
+            wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
+            chmod +x /bin/hadolint  
+
+            export PATH=$PATH:/bin
+      # run lint!
+      - run:
+          name: Lint YAMLs
+          command: |
+            source venv/bin/activate
+            make lint
