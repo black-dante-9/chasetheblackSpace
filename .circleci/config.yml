@@ -9,7 +9,7 @@ jobs:
     working_directory: ~/repo
     docker:
     # Use the same Docker base as the project
-      - image: chasetheblack/udacity-capstone-project-1:latest
+      - image: chasetheblack/udacity-capstone-project-2:latest
       
     steps:
       - checkout
