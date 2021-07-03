@@ -5,7 +5,7 @@
 
 # Step 1:
 # Create dockerpath
-dockerpath=chasetheblack/udacity-capstone-project:latest
+dockerpath=chasetheblack/microservices:latest
 
 
 # Step 2:  
