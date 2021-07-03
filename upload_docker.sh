@@ -12,7 +12,7 @@ export dockerpath=chasetheblack/udacity-capstone-project-2:latest
 # Build the image
 docker login --username chasetheblack
 docker build -t $dockerpath .
-docker tag udacity-capstone-project-2 $dockerpath
+docker tag capstone $dockerpath
 echo "Docker ID and Image: $dockerpath"
 # Step 3:
 # Push image to a docker repository
