@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM python:3.7.3-stretch
 WORKDIR /app
 ## Step 1:
 # Copy website static files to the server
