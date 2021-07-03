@@ -5,7 +5,7 @@
 
 # Step 1:
 # Create dockerpath
-export dockerpath=chasetheblack/udacity-capstone-project-2:latest
+export dockerpath=chasetheblack/udacity-capstone-project-2:capstone
 
 
 # Step 2:  
