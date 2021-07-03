@@ -5,13 +5,15 @@
 
 # Step 1:
 # Create dockerpath
-dockerpath=chasetheblack/microservices:latest
+export dockerpath=chasetheblack/udacity-capstone-project:latest
 
 
 # Step 2:  
 # Build the image
+docker login --username chasetheblack
 docker build -t $dockerpath .
-
+docker tag udacity-capstone-project $dockerpath
+echo "Docker ID and Image: $dockerpath"
 # Step 3:
 # Push image to a docker repository
 docker push $dockerpath
