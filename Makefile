@@ -15,7 +15,7 @@ install:
 	pip3 install yamllint	
 run:
 	# Run the docker container from image
-	docker run --name capstone -d  -p 8080:80 chasetheblack/microservices:latest 
+	docker run --name capstone -d  -p 8080:80 chasetheblack/udacity-capstone-project:latest
 
 lint:
 	# See local hadolint install instructions:   https://github.com/hadolint/hadolint
