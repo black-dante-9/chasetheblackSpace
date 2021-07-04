@@ -13,8 +13,8 @@ install:
 	# This should be run from inside a virtualenv
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
-	wget -O ./hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
-		chmod +x ./hadolint
+	sudo wget -O ./hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
+		sudo chmod +x ./hadolint
 
 run:
 	# Run the docker container from image
@@ -22,7 +22,7 @@ run:
 lint:
 
 	# This is linter for Dockerfiles
-	./hadolint Dockerfile
-	pylint --disable=R,C,W1203,DL306
+	./hadolint /app/Dockerfile
+	# pylint --disable=R,C,W1203,DL3006
 
 all: install lint test
