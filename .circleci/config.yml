@@ -56,10 +56,10 @@ jobs:
       - run:
           name: Upload Docker to Dockerhub
           command: |
-            docker login --username chasetheblack
+            docker login -u="$DOCKERHUB_USERNAME" -p="$DOCKERHUB_PASSWORD"
             docker tag capstone $dockerpath
             echo "Docker ID and Image: $dockerpath"
-            docker push $dockerpath
+            docker push chasetheblack/udacity-capstone-project-2:capstone
 
   deploy-infrastructure:
     docker:
