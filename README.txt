@@ -5,12 +5,12 @@ Steps to build the pipeline
 
 ## Build the image
 # Step1 build the image
-docker build -t chasetheblack/udacity-capstone-project:latest .
+docker build -t chasetheblack/udacity-capstone-project-2:latest .
 
 # Step2 run the container and push it to docker cloud
 docker run --name capstone -d  -p 8080:80 chasetheblack/udacity-capstone-project:latest
 docker exec -it capstone bash
-docker push chasetheblack/udacity-capstone-project:latest
+docker push chasetheblack/udacity-capstone-project-2:latest
 
 ## Build AWS EKS environments
 # Step3 build VPC
@@ -30,5 +30,8 @@ kubectl get svc
 # Step7 manually create the node group
 # Reference : https://docs.aws.amazon.com/eks/latest/userguide/getting-started-console.html
 
-# Step8 wait for the nodes to become ready
+# Step8 
 kubectl get nodes --watch
+
+
+aws eks create-cluster --cluster-name udacity-eks --template-body file://cloudformation-stack.yml --region=us-east-1 --capabilities CAPABILITY_IAM
