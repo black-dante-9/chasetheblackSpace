@@ -51,15 +51,9 @@ Resources:
                 Fn::Sub: ${EnvironmentName}-PUB-NETS
 
                 
-  Outputs:
-    EksId:
-      Description: EKS id
-      Value: !Ref CapstoneProjectCluster
-      Export:
-        Name: !Sub ${EnvironmentName}-EKSCluster
-
-    EKSRoleArn:
-      Description: Role for accessing and creating aws resources
-      Value: !GetAtt EKSClusterRole.Arn
-      Export:
-        Name: !Sub ${EnvironmentName}-EKSRole
+Outputs:
+  EKSRoleArn:
+    Description: Role for accessing and creating aws resources
+    Value: !GetAtt EKSClusterRole.Arn
+    Export:
+      Name: !Sub ${EnvironmentName}-EKSRole
