@@ -18,7 +18,7 @@ install:
 
 run:
 	# Run the docker container from image
-	docker run --name capstone -d  -p 8080:80 chasetheblack/udacity-capstone-project-2
+	docker run --name capstone -d  -p 8080:80 chasetheblack/udacity-capstone-project-2:latest
 lint:
 	# See local hadolint install instructions:   https://github.com/hadolint/hadolint
 	# This is linter for Dockerfiles
