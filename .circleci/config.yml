@@ -50,16 +50,19 @@ jobs:
       - run:
           name: Build docker container
           command: |
-            docker build --tag=$DOCKER_IMAGE_NAME .
+            docker build . --tag=udacity-capstone-project-2
             docker image ls
 
       - run:
           name: Upload Docker to Dockerhub
           command: |
-            echo "Docker ID and Image: $DOCKER_IMAGE_NAME"
-            docker login -u="$DOCKERHUB_USERNAME" -p="$DOCKERHUB_PASSWORD"
-            docker tag $DOCKER_IMAGE_NAME $DOCKERHUB_USERNAME/$DOCKER_IMAGE_NAME:$CIRCLE_WORKFLOW_ID
-            docker push $DOCKERHUB_USERNAME/$DOCKER_IMAGE_NAME:$CIRCLE_WORKFLOW_ID
+            $dockerpath = chasetheblack/udacity-capstone-project-2
+            export dockerpath=chasetheblack/udacity-capstone-project-2:capstone
+            docker login --username chasetheblack
+            docker build -t chasetheblack/udacity-capstone-project-2 .
+            docker tag capstone $dockerpath
+            echo "Docker ID and Image: $dockerpath
+            docker push $dockerpath
 
   deploy-infrastructure:
     docker:
