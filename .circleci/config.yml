@@ -60,7 +60,7 @@ jobs:
             docker tag $DOCKER_IMAGE_NAME $DOCKERHUB_USERNAME/$DOCKER_IMAGE_NAME:capstone
             echo "Docker ID and Image: $DOCKERHUB_USERNAME/$DOCKER_IMAGE_NAME:$capstone
             docker login -u="$DOCKERHUB_USERNAME" -p="$DOCKERHUB_PASSWORD"
-            docker push "$DOCKERHUB_USERNAME/$DOCKER_IMAGE_NAME:capstone
+            docker push "$DOCKERHUB_USERNAME/$DOCKER_IMAGE_NAME:capstone"
 
   deploy-infrastructure:
     docker:
