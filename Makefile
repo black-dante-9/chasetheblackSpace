@@ -21,8 +21,8 @@ run:
 	docker run --name capstone -d  -p 8080:80 chasetheblack/udacity-capstone-project-2:latest
 lint:
 
-	# This is linter for Dockerfiles
-	./hadolint /app/Dockerfile
+
+	./hadolint Dockerfile
 	# pylint --disable=R,C,W1203,DL3006
 
 all: install lint test
