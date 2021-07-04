@@ -57,7 +57,7 @@ jobs:
           name: Upload Docker to Dockerhub
           command: |
             $dockerpath = chasetheblack/udacity-capstone-project-2
-            export dockerpath=chasetheblack/udacity-capstone-project-2:capstone
+            export dockerpath=chasetheblack/udacity-capstone-project-2
             docker login --username chasetheblack
             docker build -t chasetheblack/udacity-capstone-project-2 .
             docker tag capstone $dockerpath
