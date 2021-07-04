@@ -1,5 +1,5 @@
 Description: >
-Chisama's Udacity Capstone Project
+  Chisama's Udacity Capstone Project
   Creates an Amazon EKS Cluster
 Parameters:
   EnvironmentName:
