@@ -50,7 +50,7 @@ jobs:
       - run:
           name: Build docker container
           command: |
-            docker build . --tag=udacity-capstone-project-2
+            docker build --tag=$DOCKER_IMAGE_NAME .
             docker image ls
 
       - run:
@@ -59,7 +59,7 @@ jobs:
             docker login -u="$DOCKERHUB_USERNAME" -p="$DOCKERHUB_PASSWORD"
             docker tag $DOCKER_IMAGE_NAME $DOCKERHUB_USERNAME/$DOCKER_IMAGE_NAME:$CIRCLE_WORKFLOW_ID
             echo "Docker ID and Image: $DOCKERHUB_USERNAME/$DOCKER_IMAGE_NAME:$CIRCLE_WORKFLOW_ID
-            docker push chasetheblack/udacity-capstone-project-2:$CIRCLE_WORKFLOW_ID
+            docker push $DOCKERHUB_USERNAME/$DOCKER_IMAGE_NAME:$CIRCLE_WORKFLOW_ID
 
   deploy-infrastructure:
     docker:

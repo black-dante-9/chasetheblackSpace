@@ -1,4 +1,4 @@
-- name: "Deploy contacinerized webapp"
+- name: "Deploy my containerized webapp"
   hosts: management[0]
   user: ubuntu
   gather_facts: false
