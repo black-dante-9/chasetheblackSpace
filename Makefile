@@ -11,8 +11,11 @@ setup:
 	python3 -m venv ~/.devops
 install:
 	# This should be run from inside a virtualenv
-	pip3 install --upgrade pip
-	pip3 install yamllint	
+	pip install --upgrade pip &&\
+		pip install -r requirements.txt
+	wget -O ./hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
+		chmod +x ./hadolint
+
 run:
 	# Run the docker container from image
 	docker run --name capstone -d  -p 8080:80 chasetheblack/udacity-capstone-project-2
@@ -20,6 +23,6 @@ lint:
 	# See local hadolint install instructions:   https://github.com/hadolint/hadolint
 	# This is linter for Dockerfiles
 	./hadolint Dockerfile
-
+	pylint --disable=R,C,W1203 app.py
 
 all: install lint test
