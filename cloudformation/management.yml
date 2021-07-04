@@ -1,11 +1,11 @@
 Description: >
-Chisama's Udacity Capstone Project
+  Chisama's Udacity Capstone Project
   Creates two individual hosts to manage the EKS-Cluster
 
 Parameters:
   EnvironmentName:
     Description: An Environment name that will be prefixed to resources
-    Default: capstone-project
+    Default: udacity-capstone-project-2
     Type: String
   SSHKeyName:
     Description: SSH key for management access
