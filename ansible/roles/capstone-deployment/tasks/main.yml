@@ -1,6 +1,6 @@
 - name: Copy deployment configuration
   copy:
-    src: "capstone-project-service.yaml"
+    src: "capstone-project-deployment.yaml"
     dest: $HOME
 
 - name: Apply deployment configuration
