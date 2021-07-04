@@ -23,6 +23,6 @@ lint:
 
 	# This is linter for Dockerfiles
 	./hadolint Dockerfile
-	# pylint --disable=R,C,W1203 
+	pylint --disable=R,C,W1203,DL306
 
 all: install lint test
