@@ -61,7 +61,7 @@ jobs:
             docker login --username chasetheblack
             docker build -t chasetheblack/udacity-capstone-project-2 .
             docker tag capstone $dockerpath
-            echo "Docker ID and Image: $dockerpath
+            echo "Docker ID and Image: $dockerpath"
             docker push $dockerpath
 
   deploy-infrastructure:
