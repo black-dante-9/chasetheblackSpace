@@ -22,7 +22,7 @@ run:
 lint:
 
 
-	./hadolint Dockerfile
+	# ./hadolint Dockerfile
 	# pylint --disable=R,C,W1203,DL3006
 
 all: install lint test

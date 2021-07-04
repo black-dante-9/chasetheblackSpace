@@ -1,4 +1,4 @@
-FROM ubuntu/nginx
+FROM ubuntu/nginx:latest
 WORKDIR /app
 ## Step 1:
 # Copy website static files to the server
