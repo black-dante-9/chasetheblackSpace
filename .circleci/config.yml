@@ -234,9 +234,9 @@ workflows:
       - upload-docker:
           requires:
             - test-build
-                filters:
-                  branches:
-                    only: [ master ]
+          filters:
+            branches:
+              only: [ master ]
       - deploy-infrastructure:
           filters:
             branches:
