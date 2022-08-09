@@ -229,13 +229,13 @@ jobs:
 workflows:
   default:
     jobs:
-      - test-build
-      - upload-docker:
-          requires:
-            - test-build
-          filters:
-            branches:
-              only: [ master ]
+            #      - test-build
+            #      - upload-docker:
+            #          requires:
+            #            - test-build
+            #          filters:
+            #            branches:
+            #              only: [ master ]
       - deploy-infrastructure:
           filters:
             branches:
