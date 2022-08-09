@@ -19,7 +19,7 @@ Parameters:
 
   DesiredSize:
     Description: How many instances should be created.
-    Default: 1
+    Default: 2
     Type: Number
 
   KeyPairName:
