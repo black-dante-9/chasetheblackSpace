@@ -10,7 +10,7 @@ This is the culmination of everything I have learnt in the Udacity Cloud DevOps 
 - Building Docker images and pushing Docker images to remote repos
 - Navigating and using AWS
 ## Deployed App:
-
+## Done
 My deployed application is a short project portfolio, running on an Nginx webserver.
 
 ## Images:
