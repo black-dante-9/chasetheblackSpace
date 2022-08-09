@@ -2,6 +2,6 @@
   "EnvironmentName=Test",
   "MinSize=1",
   "MaxSize=2",
-  "DesiredSize=1",
+  "DesiredSize=2",
   "KeyPairName=github_chasetheblack"
 ]
