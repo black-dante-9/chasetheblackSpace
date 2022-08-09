@@ -4,7 +4,7 @@ Description: >
 Parameters:
   EnvironmentName:
     Description: An Environment name that will be prefixed to resources
-    Default: udacity-capstone-project-2
+    Default: Test
     Type: String
 
   MinSize:
@@ -24,7 +24,7 @@ Parameters:
 
   KeyPairName:
     Description: The EC2 Key Pair to allow SSH access to the instances
-    Default: udacity-capstone
+    Default: github_chasetheblack
     Type: AWS::EC2::KeyPair::KeyName
 
 Mappings:

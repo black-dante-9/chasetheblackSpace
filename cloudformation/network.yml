@@ -6,7 +6,7 @@ Description: >
 Parameters:
   EnvironmentName:
     Description: An environment added to resource names
-    Default: udacity-capstone-project-2
+    Default: Test
     Type: String
 
   VpcCIDR:
