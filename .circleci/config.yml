@@ -92,6 +92,7 @@ jobs:
           no_output_timeout: 15m
       - run:
           name: Ensure Nodegroup exists
+          no_output_timeout: 30m
           command: |
             aws cloudformation deploy \
               --template-file cloudformation/nodegroup.yml \
