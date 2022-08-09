@@ -1,7 +1,7 @@
 [
-  "EnvironmentName=udacity-capstone-project-2",
+  "EnvironmentName=Test",
   "MinSize=2",
   "MaxSize=6",
   "DesiredSize=4",
-  "KeyPairName=udacity-capstone"
+  "KeyPairName=github_chasetheblack"
 ]
