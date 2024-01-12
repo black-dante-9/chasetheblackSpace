@@ -1,5 +1,5 @@
 # udacity-capstone
-[![Dalinkw3nt](https://circleci.com/gh/Dalinkw3nt/udacity-capstone.svg?style=svg)](https://app.circleci.com/pipelines/github/Dalinkw3nt/udacity-capstone)
+
 
 This is the culmination of everything I have learnt in the Udacity Cloud DevOps Nanodegree. 
 
@@ -10,9 +10,7 @@ This is the culmination of everything I have learnt in the Udacity Cloud DevOps 
 - Building Docker images and pushing Docker images to remote repos
 - Navigating and using AWS
 
-##becasue
-## still trying
-## Deployed App:
+
 My deployed application is a short project portfolio, running on an Nginx webserver.
 
 ## Images:
