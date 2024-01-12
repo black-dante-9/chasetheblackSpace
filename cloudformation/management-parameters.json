@@ -1,0 +1,5 @@
+[
+  "EnvironmentName=Test",
+  "SSHKeyName=github_chasetheblack",
+  "amiImageId=ami-09e67e426f25ce0d7"
+]
