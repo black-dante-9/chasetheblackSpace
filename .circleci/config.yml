@@ -51,7 +51,7 @@ jobs:
       - run:
           name: Build docker container
           command: |
-            docker build -t $DOCKER_IMAGE_NAME:latest .
+            docker build .
             docker image ls
 
       - run:
