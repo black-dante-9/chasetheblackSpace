@@ -51,7 +51,7 @@ jobs:
       - run:
           name: Build docker container
           command: |
-            docker build --tag=$chasetheblack:new .
+            docker build chasetheblack:new .
             docker image ls
 
       - run:
