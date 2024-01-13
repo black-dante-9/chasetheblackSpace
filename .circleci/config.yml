@@ -60,7 +60,7 @@ jobs:
             docker login -u="$DOCKERHUB_USERNAME" -p="$DOCKERHUB_PASSWORD"
             docker tag ubuntu/nginx $DOCKER_IMAGE_NAME:latest
             echo "Docker ID and Image: $DOCKER_IMAGE_NAME:$capstone"
-            docker login -u="$DOCKERHUB_USERNAME" -p="$DOCKERHUB_PASSWORD"
+            docker login --username="$DOCKERHUB_USERNAME" --password="$DOCKERHUB_PASSWORD"
             docker push $DOCKER_IMAGE_NAME
 
   deploy-infrastructure:
