@@ -51,7 +51,7 @@ jobs:
       - run:
           name: Build docker container
           command: |
-            docker build .
+            docker build -tag chasetheblack:latest .
             docker image ls
 
       - run:
