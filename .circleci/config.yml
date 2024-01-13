@@ -58,8 +58,8 @@ jobs:
           name: Upload Docker to Dockerhub
           command: |
             docker login -u="$DOCKERHUB_USERNAME" -p="$DOCKERHUB_PASSWORD"
-            docker tag $DOCKER_IMAGE_NAME:capstone $DOCKERHUB_USERNAME/$DOCKER_IMAGE_NAME:capstone
-            echo "Docker ID and Image: $DOCKER_IMAGE_NAME:capstone"
+            docker tag $DOCKER_IMAGE_NAME:latest $DOCKERHUB_USERNAME/$DOCKER_IMAGE_NAME:latest
+            echo "Docker ID and Image: $DOCKER_IMAGE_NAME:latest"
             docker login -u="$DOCKERHUB_USERNAME" -p="$DOCKERHUB_PASSWORD"
             docker push $DOCKER_IMAGE_NAME
 
