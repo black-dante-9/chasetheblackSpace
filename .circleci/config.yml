@@ -51,14 +51,14 @@ jobs:
       - run:
           name: Build docker container
           command: |
-            docker build --tag=$DOCKER_IMAGE_NAME .
+            docker build --tag=$chasetheblack:new .
             docker image ls
 
       - run:
           name: Upload Docker to Dockerhub
           command: |
             docker login -u="$DOCKERHUB_USERNAME" -p="$DOCKERHUB_PASSWORD"
-            docker tag $DOCKERHUB_USERNAME/$DOCKER_IMAGE_NAME:capstone $DOCKER_IMAGE_NAME 
+            docker tag $DOCKER_IMAGE_NAME $DOCKERHUB_USERNAME/$DOCKER_IMAGE_NAME:new
             echo "Docker ID and Image: $DOCKER_IMAGE_NAME:$capstone"
             docker login -u="$DOCKERHUB_USERNAME" -p="$DOCKERHUB_PASSWORD"
             docker push $DOCKER_IMAGE_NAME
