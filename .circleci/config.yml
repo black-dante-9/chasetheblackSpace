@@ -38,7 +38,7 @@ jobs:
 
   upload-docker:
     docker:
-      - image: circleci/golang:1.15
+      - image: cimg/golang:1.15
 
     working_directory: ~/repo
 
@@ -51,7 +51,7 @@ jobs:
       - run:
           name: Build docker container
           command: |
-            docker build --t DOCKER_IMAGE_NAME:latest .
+            docker build -t $DOCKER_IMAGE_NAME:latest .
             docker image ls
 
       - run:
